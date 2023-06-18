@@ -19,6 +19,6 @@ npm install
 ```
 4. Run the App project in development mode.
 ```
-npm start
+npm run start
 ```
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
