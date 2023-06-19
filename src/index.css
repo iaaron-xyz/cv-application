@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    .edit-section {
+        min-width: max(300px, 40%);
+    }
+
+    .render-section {
+        min-width: 440px;
+        height: 680px;
+    }
+}
