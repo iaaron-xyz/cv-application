@@ -15,4 +15,26 @@
         min-width: 440px;
         height: 680px;
     }
+
+    /* Form Styles */
+    .form-element {
+        display: block;
+        font-size: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    .form-input {
+        display: block;
+        width: 100%;
+    }
+    .form-btn {
+        background: indigo;
+        color: white;
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+    .form-btn:hover {
+        background: rgb(116, 37, 173);
+    }
 }
