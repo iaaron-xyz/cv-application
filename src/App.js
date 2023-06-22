@@ -5,7 +5,7 @@ import RenderSection from "./components/RenderSection";
 class App extends Component {
   render() {
     return (
-      <div className="p-4 flex flex-row justify-center flex-wrap">
+      <div className="p-4 flex flex-row justify-center flex-wrap bg-slate-500">
         <EditSection />
         <RenderSection />
       </div>
