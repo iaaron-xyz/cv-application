@@ -1,16 +1,18 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import EditSection from "./components/EditSection";
 import RenderSection from "./components/RenderSection";
+import { cvData } from "./components/cvData";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="p-4 flex flex-row justify-center flex-wrap bg-slate-500">
-        <EditSection />
-        <RenderSection />
-      </div>
-    );
-  }
+const App = () => {
+
+  const [data, setData] = useState(cvData);
+
+  return (
+    <div className="p-4 flex flex-row justify-center flex-wrap bg-slate-500">
+      <EditSection data={data} setData={setData}/>
+      <RenderSection data={data}/>
+    </div>
+  )
 }
 
 export default App;

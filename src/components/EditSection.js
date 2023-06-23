@@ -1,15 +1,12 @@
-import React, { Component } from "react";
 import HeaderForm from "./HeaderForm";
 
 
-class EditSection extends Component {
-  render() {
-    return (
-      <div className="edit-section bg-red-400 m-4 p-4">
-        <HeaderForm />
-      </div>
-    )
-  }
+const EditSection = ({ data, setData }) => {
+  return (
+    <div className="edit-section m-4 p-4">
+      <HeaderForm data={data} setData={setData}/>
+    </div>
+  )
 }
 
 export default EditSection
