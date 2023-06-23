@@ -16,12 +16,37 @@ const RenderSection = ({ data }) => {
           </p>
         </div>
         <div className="bg-cyan-950 py-2">
-          <ul className="list-none list-inline text-center">
-            <li>
-              contact 1
+          <ul className="list-none list-inline text-center text-sm">
+          <li>
+              { data.contactInfo.email ? (
+                <a href={data.contactInfo.email}>{data.contactInfo.email}</a>
+              ) : (
+                ''
+              )}
             </li>
             <li>
-              contact 2
+              {data.contactInfo.number}
+            </li>
+            <li>
+              { data.contactInfo.linkedin ? (
+                <a href={data.contactInfo.linkedin}>linkedIn</a>
+              ) : (
+                ''
+              )}
+            </li>
+            <li>
+              { data.contactInfo.github ? (
+                <a href={data.contactInfo.github}>Github</a>
+              ) : (
+                ''
+              )}
+            </li>
+            <li>
+              { data.contactInfo.website ? (
+                <a href={data.contactInfo.website}>My portfolio</a>
+              ) : (
+                ''
+              )}
             </li>
           </ul>
         </div>
@@ -31,14 +56,5 @@ const RenderSection = ({ data }) => {
 
   )
 }
-
-// class RenderSection extends Component {
-//   render() {
-
-//     const {name, description, titleCareer} = headerData;
-//     return (
-//     )
-//   }
-// }
 
 export default RenderSection
