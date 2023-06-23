@@ -87,7 +87,7 @@ const HeaderForm = ({ data, setData }) => {
               id="linkedin"
               className="block w-full"
               value={data.contactInfo.linkedin}
-              onChange={handleInputChange}
+              onChange={handleContactInfo}
             />
             {/* github */}
             <input
@@ -96,7 +96,7 @@ const HeaderForm = ({ data, setData }) => {
               id="github"
               className="block w-full"
               value={data.contactInfo.github}
-              onChange={handleInputChange}
+              onChange={handleContactInfo}
             />
             {/* website */}
             <input
@@ -105,7 +105,7 @@ const HeaderForm = ({ data, setData }) => {
               id="website"
               className="block w-full"
               value={data.contactInfo.website}
-              onChange={handleInputChange}
+              onChange={handleContactInfo}
             />
           </div>
         </div>
