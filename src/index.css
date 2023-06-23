@@ -19,6 +19,7 @@
     }
     .render-section {
         min-width: 700px;
+        max-width: 700px;
         min-height: 1020px;
     }
 
