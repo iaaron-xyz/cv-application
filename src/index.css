@@ -23,6 +23,10 @@
     }
 
     /* Form Styles */
+    input, textarea {
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
     .form-element {
         display: block;
         font-size: 1rem;
