@@ -3,15 +3,14 @@ import React, { useState } from 'react'
 const SkillsForm = ({ data, setData }) => {
 
   const [categoryCounter, setCategoryCounter] = useState(1);
-  const [skills, setSkills] = useState(data.skills);
 
   const handleInputCategory = (e) => {
     const categoryId = parseInt(e.target.id.split("-").pop());
     const updatedSkill = {
-      ...skills[categoryId-1],
+      ...data.skills[categoryId-1],
       skillCategory: e.target.value,
     };
-    setSkills([updatedSkill]);
+    setData({...data, skills:[updatedSkill]});
   };
   const handleInputSkillsList = (e) => {
     const categoryId = parseInt(e.target.id.split("-").pop());
@@ -19,10 +18,10 @@ const SkillsForm = ({ data, setData }) => {
     const skillsList = e.target.value.split(",");
     // Update list of skills
     const updatedList = {
-      ...skills[categoryId-1],
+      ...data.skills[categoryId-1],
       skillsList: skillsList,
     };
-    setSkills([updatedList])
+    setData({...data, skills: [updatedList]})
     console.log(skillsList);
   }
 
@@ -30,7 +29,7 @@ const SkillsForm = ({ data, setData }) => {
     <div className='p-4'>
       <h2 className='text-2xl'>Skills</h2>
       <form>
-        {skills.map((skill) => {
+        {data.skills.map((skill) => {
           return (
             <div key={categoryCounter}>
               <div>
