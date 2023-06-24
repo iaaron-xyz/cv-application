@@ -18,6 +18,16 @@ export const cvData = {
       optDescription: "Optional explanation."
     },
   ],
-  skills: ["JavaScript", "React.js"],
-  languages: ["English", "Spanish"],
+  skills: [
+    {
+      skillCategory: "Frontend",
+      skillsList: ["JavaScript", "React.js"],
+    },
+  ],
+  languages: [
+    {
+      language: "English",
+      level: "Spanish",
+    },
+  ],
 }
