@@ -5,7 +5,7 @@ const SkillsForm = ({ data, setData }) => {
   const [categoryCounter, setCategoryCounter] = useState(1);
   const [skills, setSkills] = useState(data.skills);
 
-  const handleCategory = (e) => {
+  const handleInputCategory = (e) => {
     const categoryId = parseInt(e.target.id.split("-").pop());
     const updatedSkill = {
       ...skills[categoryId-1],
@@ -13,8 +13,17 @@ const SkillsForm = ({ data, setData }) => {
     };
     setSkills([updatedSkill]);
   };
-  const handleSkillsList = () => {
-    console.log('handling skill cateogries');
+  const handleInputSkillsList = (e) => {
+    const categoryId = parseInt(e.target.id.split("-").pop());
+    // split by commas
+    const skillsList = e.target.value.split(",");
+    // Update list of skills
+    const updatedList = {
+      ...skills[categoryId-1],
+      skillsList: skillsList,
+    };
+    setSkills([updatedList])
+    console.log(skillsList);
   }
 
   return (
@@ -34,21 +43,21 @@ const SkillsForm = ({ data, setData }) => {
                   id={`skillsCategory-${categoryCounter}`}
                   className="block w-full"
                   value={skill.skillCategory}
-                  onChange={handleCategory}
+                  onChange={handleInputCategory}
                 />
               </div>
 
               <div>
-                <label htmlFor="skillsList">
+                <label htmlFor={`skillsList-${categoryCounter}`}>
                   List of Skills
                 </label>
                 <input
                   type="text"
-                  name="skillsList"
-                  id="skillsList"
+                  name={`skillsList-${categoryCounter}`}
+                  id={`skillsList-${categoryCounter}`}
                   className="block w-full"
                   value={skill.skillsList}
-                  onChange={handleSkillsList}
+                  onChange={handleInputSkillsList}
                 />
               </div>
             </div>
