@@ -23,6 +23,14 @@
         min-height: 1020px;
     }
 
+    /* Render section styles */
+    .render-main-content {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+
     /* Form Styles */
     input, textarea {
         border-radius: 5px;
