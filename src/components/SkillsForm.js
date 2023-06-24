@@ -59,10 +59,13 @@ const SkillsForm = ({ data, setData }) => {
                   onChange={handleInputSkillsList}
                 />
               </div>
+              <div className='flex flex-row-reverse py-2'>
+                <button className='delete-btn' id={`remove-category-${categoryCounter}`}>Remove {skill.skillCategory} category</button>
+              </div>
             </div>
           )
         })}
-        <button className='form-btn'>Add category skill</button>
+        <button type='button' className='form-btn'>Add new skills +</button>
       </form>
     </div>
   )

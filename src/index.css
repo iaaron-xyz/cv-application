@@ -12,6 +12,12 @@
         display: inline;
         padding: 1rem;
     }
+    /* Buttons */
+    .delete-btn {
+        background-color: indianred;
+        color: white;
+        padding: 0.5rem;
+    }
 
     /* Big section styles */
     .edit-section {
