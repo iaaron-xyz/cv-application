@@ -21,6 +21,9 @@
         min-width: 700px;
         max-width: 700px;
         min-height: 1020px;
+        max-height: 1020px;
+        display: grid;
+        grid-template-rows: 2fr 10fr;
     }
 
     /* Render section styles */
@@ -28,7 +31,6 @@
         display: grid;
         grid-template-columns: 2fr 5fr;
         grid-template-rows: auto;
-        gap: 1rem;
     }
 
     /* Form Styles */
