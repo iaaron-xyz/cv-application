@@ -1,26 +1,38 @@
-// import React, { useState } from 'react'
-
 const SkillsForm = ({ data, setData }) => {
 
   const handleInputCategory = (e) => {
     const categoryId = parseInt(e.target.id.split("-").pop());
-    const updatedSkill = {
+    // temporal copy of skills list
+    const updatedCategory = [...data.skills];
+    // update category
+    updatedCategory[categoryId] = {
       ...data.skills[categoryId],
-      skillCategory: e.target.value,
+      skillCategory: e.target.value
     };
-    setData({...data, skills:[updatedSkill]});
+    // update data
+    setData({...data, skills: updatedCategory});
   };
+
   const handleInputSkillsList = (e) => {
     const categoryId = parseInt(e.target.id.split("-").pop());
     // split by commas
     const skillsList = e.target.value.split(",");
-    // Update list of skills
-    const updatedList = {
+    // temporal copy of skills list
+    const updatedSkills = [...data.skills];
+    // update list of skills
+    updatedSkills[categoryId] = {
       ...data.skills[categoryId],
-      skillsList: skillsList,
+      skillsList: skillsList
     };
-    setData({...data, skills: [updatedList]})
-    console.log(skillsList);
+    // update data
+    setData({...data, skills: updatedSkills});
+    // console.log(skillsList);
+  }
+
+  const handleAddNewCategory = () => {
+    setData({...data,
+      skills: [...data.skills, {skillCategory: "New category", skillsList: []}]
+    });
   }
 
   return (
@@ -63,7 +75,9 @@ const SkillsForm = ({ data, setData }) => {
             </div>
           )
         })}
-        <button type='button' className='form-btn'>Add new skills +</button>
+        <button type='button' className='form-btn' onClick={handleAddNewCategory}>
+          Add new skills +
+        </button>
       </form>
     </div>
   )
