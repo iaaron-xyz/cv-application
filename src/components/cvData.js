@@ -27,7 +27,7 @@ export const cvData = {
   languages: [
     {
       language: "English",
-      level: "Spanish",
+      level: "B2",
     },
   ],
 }
