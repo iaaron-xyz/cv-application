@@ -35,6 +35,14 @@ const SkillsForm = ({ data, setData }) => {
     });
   }
 
+  const handleRemoveCategory = (categoryName) => {
+    // Remove element containing categoryName
+    let updatedCategories = data.skills.filter((category) => categoryName !== category.skillCategory);
+    // update data
+    setData({...data, skills: updatedCategories});
+
+  }
+
   return (
     <div className='p-4'>
       <h2 className='text-2xl'>Skills</h2>
@@ -70,7 +78,9 @@ const SkillsForm = ({ data, setData }) => {
                 />
               </div>
               <div className='flex flex-row-reverse py-2'>
-                <button className='delete-btn' id={`remove-category-${index}`}>Remove {skill.skillCategory} category</button>
+                <button  type="button" className='delete-btn' id={`remove-category-${index}`} onClick={() => handleRemoveCategory(skill.skillCategory)}>
+                  Remove {skill.skillCategory} category
+                </button>
               </div>
             </div>
           )
