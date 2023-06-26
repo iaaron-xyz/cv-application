@@ -37,7 +37,6 @@ const LangFormSection = ({ data, setData }) => {
       <form>
         {data.languages.map((lang, index) => {
           return (
-            <>
             <div key={index} className='grid grid-cols-2 gap-1'>
               <div className='form-element'>
                 <label>
@@ -65,13 +64,13 @@ const LangFormSection = ({ data, setData }) => {
                 onChange={handleInputLang}
               />
             </div>
-          </div>
+            <div></div>
             <div className=' flex flex-row-reverse pb-2'>
               <button  type="button" className='delete-btn' id={`remove-lang-${index}`} onClick={() => handleRemoveLang(lang.language)}>
                 Remove {lang.language} language
               </button>
             </div>
-          </>
+          </div>
           )
         })}
         <button type='button' className='form-btn' onClick={handleAddNewLang}>
