@@ -1,6 +1,12 @@
 import React from 'react'
 
 const LangFormSection = ({ data, setData }) => {
+
+  const handleAddNewLang = () => {
+    setData({...data,
+      languages: [...data.languages, {language: "", level: ""}]
+    });
+  }
   return (
     <div className='p-4'>
       <h2 className='text-2xl'>Languages</h2>
@@ -14,7 +20,7 @@ const LangFormSection = ({ data, setData }) => {
                 </label>
                 <input
                   type="text"
-                  id="language"
+                  id={`language-${index}`}
                   className='block w-full'
                   value={lang.language}
                 />
@@ -25,7 +31,7 @@ const LangFormSection = ({ data, setData }) => {
               </label>
               <input
                 type="text"
-                id="language"
+                id={`level-${index}`}
                 className='block w-full'
                 value={lang.level}
               />
@@ -33,6 +39,9 @@ const LangFormSection = ({ data, setData }) => {
           </div>
           )
         })}
+        <button type='button' className='form-btn' onClick={handleAddNewLang}>
+          Add language +
+        </button>
       </form>
     </div>
   )
