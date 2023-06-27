@@ -10,7 +10,7 @@
     /* General styles */
     .list-inline li {
         display: inline;
-        padding: 1rem;
+        padding: 0.75rem;
     }
     /* Buttons */
     .delete-btn {
@@ -38,7 +38,7 @@
         grid-template-columns: 2fr 5fr;
         grid-template-rows: auto;
     }
-
+    
     /* Form Styles */
     input, textarea {
         border-radius: 5px;
