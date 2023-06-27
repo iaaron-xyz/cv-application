@@ -1,7 +1,18 @@
 const EduFormSection = ({ data, setData }) => {
 
-  const handleInputEdu = () => {
-    console.log("Handle input Edu")
+  const handleInputEdu = (e) => {
+    // get index number and associated sub-field
+    const eduId = parseInt(e.target.id.split("-").pop());
+    const eduField = e.target.id.split("-")[0];
+    // temporal copy of education list
+    const updatedEdu = [...data.education];
+    // update education list
+    updatedEdu[eduId] = {
+      ...data.education[eduId],
+      [eduField]: e.target.value
+    };
+    // update data
+    setData({...data, education: updatedEdu});
   }
 
   return (
