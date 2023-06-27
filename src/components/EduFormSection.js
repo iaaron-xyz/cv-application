@@ -15,6 +15,13 @@ const EduFormSection = ({ data, setData }) => {
     setData({...data, education: updatedEdu});
   }
 
+  const handleRemoveEdu = (schoolName, degree) => {
+    // new list with removed school and degree
+    let updatedEducation = data.education.filter((edu) => ((schoolName !== edu.universityName) && (degree !== edu.title)));
+    // update data
+    setData({...data, education: updatedEducation});
+  }
+
   return (
     <div className="p-4">
       <h2 className="text-2xl">Education</h2>
@@ -89,10 +96,10 @@ const EduFormSection = ({ data, setData }) => {
                   </textarea>
                 </div>
               </div>
-              <div className=' flex flex-row-reverse pb-2'>
-                {/* <button  type="button" className='delete-btn' id={`remove-edu-${index}`} onClick={() => handleRemoveEdu(edu.universityName)}>
-                  Remove {edu.universityName} language
-                </button> */}
+              <div className='form-element flex flex-row-reverse py-2'>
+                <button  type="button" className='delete-btn' id={`remove-edu-${index}`} onClick={() => handleRemoveEdu(edu.universityName)}>
+                  Remove {edu.universityName} ({edu.endYear})
+                </button>
               </div>
             </div>
           )
