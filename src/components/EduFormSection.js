@@ -15,6 +15,20 @@ const EduFormSection = ({ data, setData }) => {
     setData({...data, education: updatedEdu});
   }
 
+  const handleAddNewEdu = () => {
+    setData({...data,
+      education: [
+        ...data.education,
+        {
+          universityName: "",
+          title: "",
+          startYear: "",
+          endYear: "",
+          optDescription: "",
+        }]
+    });
+  }
+
   const handleRemoveEdu = (schoolName, degree) => {
     // new list with removed school and degree
     let updatedEducation = data.education.filter((edu) => ((schoolName !== edu.universityName) && (degree !== edu.title)));
@@ -97,13 +111,16 @@ const EduFormSection = ({ data, setData }) => {
                 </div>
               </div>
               <div className='form-element flex flex-row-reverse py-2'>
-                <button  type="button" className='delete-btn' id={`remove-edu-${index}`} onClick={() => handleRemoveEdu(edu.universityName)}>
-                  Remove {edu.universityName} ({edu.endYear})
+                <button  type="button" className='delete-btn' id={`remove-edu-${index}`} onClick={() => handleRemoveEdu(edu.universityName, edu.title)}>
+                  Remove {edu.universityName} {edu.endYear}
                 </button>
               </div>
             </div>
           )
         })}
+        <button type='button' className='form-btn' onClick={handleAddNewEdu}>
+          Add School +
+        </button>
       </form>
     </div>
   )
