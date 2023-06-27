@@ -44,71 +44,51 @@ const EduFormSection = ({ data, setData }) => {
           return (
             <div key={index}>
               <div className='grid grid-cols-2 gap-1'>
-                <div className='form-element'>
-                  <label htmlFor={`universityName-${index}`}>
-                    University/School Name
-                  </label>
-                  <input
-                    type="text"
-                    name={`universityName-${index}`}
-                    id={`universityName-${index}`}
-                    className='block w-full'
-                    value={edu.universityName}
-                    onChange={handleInputEdu}
-                  />
-                </div>
-                <div className='form-element'>
-                  <label htmlFor={`title-${index}`}>
-                    title
-                  </label>
-                  <input
-                    type="text"
-                    name={`title-${index}`}
-                    id={`title-${index}`}
-                    className='block w-full'
-                    value={edu.title}
-                    onChange={handleInputEdu}
-                  />
-                </div>
-                <div className="'form-element">
-                  <label htmlFor={`startYear-${index}`}>
-                    Start year:
-                  </label>
-                  <input
-                    type="number"
-                    name={`startYear-${index}`}
-                    id={`startYear-${index}`}
-                    className="block w-full"
-                    value={edu.startYear}
-                    onChange={handleInputEdu}
-                  />
-                </div>
-                <div className="'form-element">
-                  <label htmlFor={`endYear-${index}`}>
-                    Graduation year:
-                  </label>
-                  <input
-                    type="number"
-                    name={`endYear-${index}`}
-                    id={`endYear-${index}`}
-                    className="block w-full"
-                    value={edu.endYear}
-                    onChange={handleInputEdu}
-                  />
-                </div>
-                <div className="'form-element col-span-full">
-                  <label htmlFor={`optDescription-${index}`}>
-                    Comments and description:
-                  </label>
-                  <textarea
-                    name={`optDescription-${index}`}
-                    id={`optDescription-${index}`}
-                    className="block w-full"
-                    value={edu.optDescription}
-                    onChange={handleInputEdu}
-                  >
-                  </textarea>
-                </div>
+                {/* School name */}
+                <FormInput
+                  index={index}
+                  labelTitle={'University/School name'}
+                  inputType={'text'}
+                  eduField={edu.universityName}
+                  field={'universityName'}
+                  handleInputEdu={handleInputEdu}
+                />
+                {/* Degree / Title */}
+                <FormInput
+                  index={index}
+                  labelTitle={'Title/Degree'}
+                  inputType={'text'}
+                  eduField={edu.title}
+                  field={'title'}
+                  handleInputEdu={handleInputEdu}
+                />
+                {/* Start year */}
+                <FormInput
+                  index={index}
+                  labelTitle={'Start year'}
+                  inputType={'number'}
+                  eduField={edu.startYear}
+                  field={'startYear'}
+                  handleInputEdu={handleInputEdu}
+                />
+                {/* End year */}
+                <FormInput
+                  index={index}
+                  labelTitle={'End year'}
+                  inputType={'number'}
+                  eduField={edu.endYear}
+                  field={'endYear'}
+                  handleInputEdu={handleInputEdu}
+                />
+                {/* Comments */}
+                <FormInput
+                  index={index}
+                  labelTitle={'Comments/Description'}
+                  inputType={''}
+                  eduField={edu.optDescription}
+                  field={'optDescription'}
+                  handleInputEdu={handleInputEdu}
+                />
               </div>
               <div className='form-element flex flex-row-reverse py-2'>
                 <button  type="button" className='delete-btn' id={`remove-edu-${index}`} onClick={() => handleRemoveEdu(edu.universityName, edu.title)}>
@@ -122,6 +102,39 @@ const EduFormSection = ({ data, setData }) => {
           Add School +
         </button>
       </form>
+    </div>
+  )
+}
+
+const FormInput = (props) => {
+  const {index, labelTitle, inputType, eduField, field, handleInputEdu} = props;
+
+  return (
+    <div className='form-element'>
+      <label htmlFor={`${field}-${index}`}>
+        {labelTitle}
+      </label>
+      { (field === 'optDescription') ? (
+        // Text Area
+        <textarea
+          name={`${field}-${index}`}
+          id={`${field}-${index}`}
+          className="block w-full"
+          value={eduField}
+          onChange={handleInputEdu}
+        >
+        </textarea>
+      ) : (
+        // Input text / number
+        <input
+          type={inputType}
+          name={`${field}-${index}`}
+          id={`${field}-${index}`}
+          className='block w-full'
+          value={eduField}
+          onChange={handleInputEdu}
+        />
+      )}
     </div>
   )
 }
