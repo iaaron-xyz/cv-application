@@ -21,19 +21,27 @@ const SidebarSkill = ({data}) => {
               {/* Render evert skill item */}
               {skill.skillsList.map((skillItem,index2) => {
                 return (
-                  <div className='flex flex-row flex-wrap'>
-                    { skillItem ? (
-                      <span key={`${index2}${index}`} className='m-0.5 p-0.5 px-1 border border-slate-50 rounded-lg bg-teal-950 text-slate-50'>{skillItem}</span>
-                    ) : (
-                      <span></span>
-                    )}
-                  </div>
+                  <ItemSkill key={index2*42+1} skillItem={skillItem}/>
                 )
               })}
             </div>
           </div>
         )
       })}
+    </div>
+  )
+}
+
+const ItemSkill = ({ skillItem }) => {
+  return (
+    <div className='flex flex-row flex-wrap'>
+      { skillItem ? (
+        <span className='m-0.5 p-0.5 px-1 border border-slate-50 rounded-lg bg-teal-950 text-slate-50'>
+          {skillItem}
+        </span>
+      ) : (
+        <span></span>
+      )}
     </div>
   )
 }
