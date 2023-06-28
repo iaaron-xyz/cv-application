@@ -53,7 +53,7 @@ const LangFormSection = ({ data, setData }) => {
               </div>
               <div className='form-element'>
               <label>
-                Level
+                Level/Certificate
               </label>
               <input
                 type="text"

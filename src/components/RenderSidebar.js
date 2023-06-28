@@ -2,9 +2,10 @@ import React from 'react'
 
 const RenderSidebar = ({ data }) => {
   return (
-    <div className="render-sidebar bg-orange-300 row-span-full">
+    <div className="render-sidebar bg-orange-300 row-span-full p-2">
       <h2 className='text-xl'>Technical Skills</h2>
-      <SidebarSkill data={data}/>
+      <SidebarSkill data={data} />
+      <SidebarLang data={data} />
     </div>
   )
 }
@@ -31,7 +32,6 @@ const SidebarSkill = ({data}) => {
     </div>
   )
 }
-
 const ItemSkill = ({ skillItem }) => {
   return (
     <div className='flex flex-row flex-wrap'>
@@ -45,5 +45,22 @@ const ItemSkill = ({ skillItem }) => {
     </div>
   )
 }
+
+const SidebarLang = ({ data }) => {
+  return (
+    <div className='mt-4'>
+      <h2 className='text-xl'>Languages</h2>
+      {data.languages.map((lang, index) => {
+        return (
+          <div key={index} className='p-2'>
+            <h3>{lang.language}</h3>
+            <p>{lang.level}</p>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 
 export default RenderSidebar
