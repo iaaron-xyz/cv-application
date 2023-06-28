@@ -8,8 +8,8 @@ const RenderSection = ({ data }) => {
     <div className="render-section bg-white">
       <HeaderRender data={data} />
       <div className="render-main-content">
-        <RenderSidebar data={data}/>
-        <RenderMain />
+        <RenderSidebar data={data} />
+        <RenderMain data={data} />
       </div>
     </div>
 
