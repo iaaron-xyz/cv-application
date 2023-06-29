@@ -3,7 +3,7 @@ import React from 'react'
 const RenderSidebar = ({ data }) => {
   return (
     <div className="render-sidebar row-span-full p-2">
-      <h2 className='text-xl'>Technical Skills</h2>
+      <h2 className='display-font text-xl font-bold text-cyan-700'>Technical Skills</h2>
       <SidebarSkill data={data} />
       <SidebarLang data={data} />
     </div>
@@ -17,7 +17,7 @@ const SidebarSkill = ({data}) => {
       {data.skills.map((skill, index) => {
         return (
           <div key={index}>
-            <h3 className='font-bold'>{skill.skillCategory}</h3>
+            <h3 className='display-font font-bold'>{skill.skillCategory}</h3>
             <div className='flex flex-row flex-wrap'>
               {/* Render evert skill item */}
               {skill.skillsList.map((skillItem,index2) => {
@@ -36,7 +36,7 @@ const ItemSkill = ({ skillItem }) => {
   return (
     <div className='flex flex-row flex-wrap'>
       { skillItem ? (
-        <span className='m-0.5 p-0.5 px-1 border border-slate-50 rounded-lg bg-teal-950 text-slate-50'>
+        <span className='m-0.5 p-0.5 px-1 border border-slate-50 rounded-lg bg-orange-500 text-slate-50'>
           {skillItem}
         </span>
       ) : (
