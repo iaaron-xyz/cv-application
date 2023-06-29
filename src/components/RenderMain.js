@@ -1,6 +1,6 @@
 const RenderMain = ({ data }) => {
   return (
-    <div className="render-main bg-pink-400 row-span-full py-2 px-4">
+    <div className="render-main row-span-full py-2 px-4">
       <MainEducation data={data}/>
     </div>
   )

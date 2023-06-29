@@ -2,7 +2,7 @@ import React from 'react'
 
 const RenderSidebar = ({ data }) => {
   return (
-    <div className="render-sidebar bg-orange-300 row-span-full p-2">
+    <div className="render-sidebar row-span-full p-2">
       <h2 className='text-xl'>Technical Skills</h2>
       <SidebarSkill data={data} />
       <SidebarLang data={data} />

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Josefin+Sans&family=Martian+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,20 @@
 @layer base {
     * {
         box-sizing: border-box;
+    }
+
+    /* Custom general classes */
+    .main-font {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .mono-font {
+        font-family: 'Martian Mono', monospace;
+    }
+    .display-font {
+        font-family: 'Carrois Gothic SC', sans-serif;
+    }
+    .text-xxs {
+        font-size: 0.65rem;
     }
 
     /* General styles */
