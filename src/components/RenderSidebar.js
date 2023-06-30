@@ -1,5 +1,3 @@
-import React from 'react'
-
 const RenderSidebar = ({ data }) => {
   return (
     <div className="render-sidebar row-span-full p-2">
@@ -48,13 +46,13 @@ const ItemSkill = ({ skillItem }) => {
 
 const SidebarLang = ({ data }) => {
   return (
-    <div className='mt-4'>
-      <h2 className='text-xl'>Languages</h2>
+    <div className='mt-6'>
+      <h2 className='display-font font-bold text-xl text-cyan-700'>Languages</h2>
       {data.languages.map((lang, index) => {
         return (
-          <div key={index} className='p-2'>
-            <h3>{lang.language}</h3>
-            <p>{lang.level}</p>
+          <div key={index} className='p-2 my-2 bg-slate-100 rounded-md'>
+            <h3 className="display-font font-bold">{lang.language}</h3>
+            <p className="text-orange-600 font-bold text-sm">{lang.level}</p>
           </div>
         )
       })}
