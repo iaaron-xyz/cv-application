@@ -41,6 +41,7 @@
     /* Big section styles */
     .edit-section {
         min-width: max(300px, 40%);
+        max-height: max(700px, 800px, 900px);
     }
     .render-section {
         min-width: 700px;
