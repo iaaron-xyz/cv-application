@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeaderRender = ({ data }) => {
   return (
-    <div id="header" className="bg-cyan-900 text-white">
+    <div id="header" className="flex flex-col bg-cyan-900 text-white">
       <div className="p-4">
         <h1 className="display-font text-4xl" id="header-name">
           {data.name}
@@ -14,7 +14,7 @@ const HeaderRender = ({ data }) => {
           {data.description}
         </p>
       </div>
-      <div className="bg-cyan-950 py-2">
+      <div className="bg-cyan-950 py-2 mt-auto">
         <ul className="mono-font flex justify-center items-center text-center text-xxs">
           <ContactItems data={data} />
         </ul>
