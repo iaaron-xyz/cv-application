@@ -18,6 +18,10 @@ const App = () => {
           <RenderSection data={data}/>
         </div>
       </div>
+
+      <footer className="bg-slate-300 text-center p-4">
+        Created by <strong><a href="https://github.com/iaaron-xyz">iaaron-xyz</a></strong> | {new Date().getFullYear()}
+      </footer>
     </>
   )
 }
