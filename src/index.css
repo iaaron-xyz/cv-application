@@ -69,6 +69,10 @@
         padding: 5px 10px;
         background: rgb(244, 244, 244);
     }
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid #0079FF;
+    }
     .form-element {
         display: block;
         font-size: 1rem;
@@ -89,5 +93,15 @@
     }
     .form-btn:hover {
         background: #278cff;
+    }
+
+    .contact-info input {
+        margin: 0.5rem 0;
+    }
+
+    .social-profile-info input {
+        border-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }

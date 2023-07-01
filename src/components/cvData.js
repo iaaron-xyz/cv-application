@@ -5,14 +5,14 @@ export const cvData = {
   contactInfo : {
     email : "user@mail.com",
     number : "1234567890",
-    linkedin : "https://www.linkedin.com/username/",
-    github : "https://github.com/username",
+    linkedin : "",
+    github : "",
     website : "www.mywebsite.com",
   },
   education: [
     {
       universityName: 'University Name',
-      title: "University Title",
+      title: "Degree title",
       startYear: "2010",
       endYear: "2014",
       optDescription: "Optional explanation."
