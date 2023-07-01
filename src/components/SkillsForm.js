@@ -44,8 +44,8 @@ const SkillsForm = ({ data, setData }) => {
   }
 
   return (
-    <div className='p-4'>
-      <h2 className='text-2xl'>Skills</h2>
+    <div className='p-4 bg-white rounded-lg mb-2'>
+      <h2 className='text-2xl text-center display-font'>Skills</h2>
       <form>
         {data.skills.map((skill, index) => {
           return (
@@ -61,6 +61,7 @@ const SkillsForm = ({ data, setData }) => {
                   className="block w-full"
                   value={skill.skillCategory}
                   onChange={handleInputCategory}
+                  placeholder="Skills group/category name"
                 />
               </div>
 
@@ -75,6 +76,7 @@ const SkillsForm = ({ data, setData }) => {
                   className="block w-full"
                   value={skill.skillsList}
                   onChange={handleInputSkillsList}
+                  placeholder="skill1, skill2, skill3"
                 />
               </div>
               <div className='flex flex-row-reverse py-2'>

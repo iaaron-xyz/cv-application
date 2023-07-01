@@ -16,8 +16,8 @@ const HeaderForm = ({ data, setData }) => {
   }
 
   return (
-    <div className="p-4 header-form-info">
-      <h2 className="text-2xl">Header info</h2>
+    <div className="p-4 header-form-info bg-white rounded-lg mb-2">
+      <h2 className="display-font text-2xl text-center">Header info</h2>
       <form >
         <div className="form-element">
           <label htmlFor="name">
@@ -30,6 +30,7 @@ const HeaderForm = ({ data, setData }) => {
             className="block w-full"
             value={data.name}
             onChange={handleInputChange}
+            placeholder="Ex: John Doe"
           />
         </div>
         <div className="form-element">
@@ -43,6 +44,7 @@ const HeaderForm = ({ data, setData }) => {
             className="block w-full"
             value={data.titleCareer}
             onChange={handleInputChange}
+            placeholder="Ex: 'Quantum Physicist' or 'Frontend Developer'"
           />
         </div>
         <div className="form-element">
@@ -70,6 +72,7 @@ const HeaderForm = ({ data, setData }) => {
               className="block w-full"
               value={data.contactInfo.email}
               onChange={handleContactInfo}
+              placeholder="username@mail.com"
             />
             {/* number phone */}
             <input
@@ -79,6 +82,7 @@ const HeaderForm = ({ data, setData }) => {
               className="block w-full"
               value={data.contactInfo.number}
               onChange={handleContactInfo}
+              placeholder=""
             />
             {/* linkedin */}
             <input
@@ -88,6 +92,7 @@ const HeaderForm = ({ data, setData }) => {
               className="block w-full"
               value={data.contactInfo.linkedin}
               onChange={handleContactInfo}
+              placeholder="linkedin username"
             />
             {/* github */}
             <input
@@ -97,6 +102,7 @@ const HeaderForm = ({ data, setData }) => {
               className="block w-full"
               value={data.contactInfo.github}
               onChange={handleContactInfo}
+              placeholder="github username"
             />
             {/* website */}
             <input
@@ -106,6 +112,7 @@ const HeaderForm = ({ data, setData }) => {
               className="block w-full"
               value={data.contactInfo.website}
               onChange={handleContactInfo}
+              placeholder="Your web portfolio"
             />
           </div>
         </div>

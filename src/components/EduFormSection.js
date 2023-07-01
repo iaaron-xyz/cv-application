@@ -37,8 +37,8 @@ const EduFormSection = ({ data, setData }) => {
   }
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl">Education</h2>
+    <div className="p-4 bg-white mb-2 rounded-lg">
+      <h2 className="display-font text-center text-2xl">Education</h2>
       <form>
         {data.education.map((edu, index) => {
           return (

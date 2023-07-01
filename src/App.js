@@ -8,9 +8,11 @@ const App = () => {
   const [data, setData] = useState(cvData);
 
   return (
-    <div className="main-font p-4 flex flex-row justify-center flex-wrap bg-slate-500">
+    <div className="main-font p-4 flex flex-row justify-center flex-wrap bg-slate-300">
       <EditSection data={data} setData={setData}/>
-      <RenderSection data={data}/>
+      <div className="drop-shadow-xl">
+        <RenderSection data={data}/>
+      </div>
     </div>
   )
 }

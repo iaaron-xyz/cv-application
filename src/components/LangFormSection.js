@@ -32,8 +32,8 @@ const LangFormSection = ({ data, setData }) => {
 
   return (
     
-    <div className='p-4'>
-      <h2 className='text-2xl'>Languages</h2>
+    <div className='p-4 bg-white mb-2 rounded-lg'>
+      <h2 className='display-font text-2xl text-center'>Languages</h2>
       <form>
         {data.languages.map((lang, index) => {
           return (
@@ -49,6 +49,7 @@ const LangFormSection = ({ data, setData }) => {
                   className='block w-full'
                   value={lang.language}
                   onChange={handleInputLang}
+                  placeholder='language. Ex: English or Chinese'
                 />
               </div>
               <div className='form-element'>
@@ -62,6 +63,7 @@ const LangFormSection = ({ data, setData }) => {
                 className='block w-full'
                 value={lang.level}
                 onChange={handleInputLang}
+                placeholder='Ex: "IELTS 7.0", "C2" or "TOEFL"'
               />
             </div>
             <div></div>

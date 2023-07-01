@@ -33,9 +33,13 @@
     }
     /* Buttons */
     .delete-btn {
-        background-color: indianred;
+        background-color: #FF0060;
         color: white;
         padding: 0.5rem;
+        border-radius: 5px;
+    }
+    .delete-btn:hover {
+        background-color: #ff3582;
     }
 
     /* Big section styles */
@@ -63,6 +67,7 @@
     input, textarea {
         border-radius: 5px;
         padding: 5px 10px;
+        background: rgb(244, 244, 244);
     }
     .form-element {
         display: block;
@@ -74,14 +79,15 @@
         width: 100%;
     }
     .form-btn {
-        background: indigo;
+        background: #0079FF;
         color: white;
         display: block;
         width: 100%;
         margin-top: 0.5rem;
         padding: 0.5rem;
+        border-radius: 5px;
     }
     .form-btn:hover {
-        background: rgb(116, 37, 173);
+        background: #278cff;
     }
 }

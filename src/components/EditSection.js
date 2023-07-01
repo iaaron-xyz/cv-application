@@ -6,7 +6,7 @@ import SkillsForm from "./SkillsForm";
 
 const EditSection = ({ data, setData }) => {
   return (
-    <div className="edit-section m-4 p-4 overflow-auto">
+    <div className="edit-section m-4 p-4 overflow-auto rounded-lg drop-shadow-lg">
       <HeaderForm data={data} setData={setData}/>
       <SkillsForm data={data} setData={setData}/>
       <LangFormSection data={data} setData={setData}/>
