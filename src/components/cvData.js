@@ -1,12 +1,12 @@
 export const cvData = {
   name : "Your name",
   description : "Describe your field of study, your skills and your why.",
-  titleCareer: "Physics Graduate",
+  titleCareer: "Physics Graduate and Frontend Developer",
   contactInfo : {
     email : "user@mail.com",
-    number : "1234567890",
-    linkedin : "",
-    github : "",
+    number : "02-312-3456",
+    linkedin : "username",
+    github : "iaaron-xyz",
     website : "www.mywebsite.com",
   },
   education: [
@@ -21,13 +21,13 @@ export const cvData = {
   skills: [
     {
       skillCategory: "Frontend",
-      skillsList: ["JavaScript", "React.js"],
+      skillsList: ["JavaScript", "React.js", "Next.js", "Tailwind CSS"],
     },
   ],
   languages: [
     {
       language: "English",
-      level: "B2",
+      level: "IELTS 7.5",
     },
   ],
 }
