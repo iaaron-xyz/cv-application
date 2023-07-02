@@ -26,7 +26,6 @@ const SkillsForm = ({ data, setData }) => {
     };
     // update data
     setData({...data, skills: updatedSkills});
-    // console.log(skillsList);
   }
 
   const handleAddNewCategory = () => {

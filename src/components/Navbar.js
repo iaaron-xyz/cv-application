@@ -10,7 +10,6 @@ const Navbar = ( { printRef } ) => {
 
     const pdf = new jsPDF();
     const imgProperties = pdf.getImageProperties(data);
-    console.log(imgProperties);
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = ((imgProperties.height) * pdfWidth) / (imgProperties.width);
 

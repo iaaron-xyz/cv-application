@@ -20,8 +20,8 @@ const SidebarSkill = ({data}) => {
               {/* Render evert skill item */}
               {skill.skillsList.map((skillItem,index2) => {
                 return (
-                  <div className="flex">
-                    <ItemSkill key={index2*42+1} skillItem={skillItem}/>
+                  <div key={index2*42+1} className="flex">
+                    <ItemSkill skillItem={skillItem}/>
                     {index2 < skill.skillsList.length-1 && ','}
                   </div>
                 )

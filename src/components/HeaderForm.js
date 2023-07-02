@@ -5,7 +5,6 @@ const HeaderForm = ({ data, setData }) => {
   }
 
   const handleContactInfo = (e) => {
-    console.log(data.contactInfo);
     setData({
       ...data,
       contactInfo: {
