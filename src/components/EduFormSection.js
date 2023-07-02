@@ -37,7 +37,7 @@ const EduFormSection = ({ data, setData }) => {
   }
 
   return (
-    <div className="p-4 bg-white mb-2 rounded-lg">
+    <div className="p-4 bg-white mb-2 rounded-lg dark:bg-slate-800 dark:text-slate-100">
       <h2 className="display-font text-center text-2xl">Education</h2>
       <form>
         {data.education.map((edu, index) => {
@@ -119,7 +119,7 @@ const FormInput = (props) => {
         <textarea
           name={`${field}-${index}`}
           id={`${field}-${index}`}
-          className="block w-full"
+          className="block w-full dark:bg-slate-700"
           value={eduField}
           onChange={handleInputEdu}
         >
@@ -130,7 +130,7 @@ const FormInput = (props) => {
           type={inputType}
           name={`${field}-${index}`}
           id={`${field}-${index}`}
-          className='block w-full'
+          className='block w-full dark:bg-slate-700'
           value={eduField}
           onChange={handleInputEdu}
         />

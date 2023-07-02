@@ -32,7 +32,7 @@ const LangFormSection = ({ data, setData }) => {
 
   return (
     
-    <div className='p-4 bg-white mb-2 rounded-lg'>
+    <div className='p-4 bg-white mb-2 rounded-lg dark:bg-slate-800 dark:text-slate-100'>
       <h2 className='display-font text-2xl text-center'>Languages</h2>
       <form>
         {data.languages.map((lang, index) => {
@@ -46,7 +46,7 @@ const LangFormSection = ({ data, setData }) => {
                   type="text"
                   name={`language-${index}`}
                   id={`language-${index}`}
-                  className='block w-full'
+                  className='block w-full dark:bg-slate-700'
                   value={lang.language}
                   onChange={handleInputLang}
                   placeholder='language. Ex: English or Chinese'
@@ -60,7 +60,7 @@ const LangFormSection = ({ data, setData }) => {
                 type="text"
                 name={`level-${index}`}
                 id={`level-${index}`}
-                className='block w-full'
+                className='block w-full dark:bg-slate-700'
                 value={lang.level}
                 onChange={handleInputLang}
                 placeholder='Ex: "IELTS 7.0", "C2" or "TOEFL"'

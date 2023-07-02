@@ -15,7 +15,7 @@ const HeaderForm = ({ data, setData }) => {
   }
 
   return (
-    <div className="p-4 header-form-info bg-white rounded-lg mb-2">
+    <div className="p-4 header-form-info bg-white rounded-lg mb-2 dark:bg-slate-800 dark:text-slate-100">
       <h2 className="display-font text-2xl text-center">Header info</h2>
       <form >
         <div className="form-element">
@@ -26,7 +26,7 @@ const HeaderForm = ({ data, setData }) => {
             type="text"
             name="name"
             id="name"
-            className="block w-full"
+            className="block w-full dark:bg-slate-700"
             value={data.name}
             onChange={handleInputChange}
             placeholder="Ex: John Doe"
@@ -40,7 +40,7 @@ const HeaderForm = ({ data, setData }) => {
             type="text"
             name="titleCareer"
             id="title"
-            className="block w-full"
+            className="block w-full dark:bg-slate-700"
             value={data.titleCareer}
             onChange={handleInputChange}
             placeholder="Ex: 'Quantum Physicist' or 'Frontend Developer'"
@@ -53,7 +53,7 @@ const HeaderForm = ({ data, setData }) => {
           <textarea
             name="description"
             id="description"
-            className="block w-full"
+            className="block w-full dark:bg-slate-700"
             value={data.description}
             onChange={handleInputChange}>
           </textarea>
@@ -68,7 +68,7 @@ const HeaderForm = ({ data, setData }) => {
               type="email"
               name="email"
               id="email"
-              className="block w-full my-2"
+              className="block w-full my-2 dark:bg-slate-700"
               value={data.contactInfo.email}
               onChange={handleContactInfo}
               placeholder="username@mail.com"
@@ -78,21 +78,21 @@ const HeaderForm = ({ data, setData }) => {
               type="text"
               name="number"
               id="number"
-              className="block w-full"
+              className="block w-full dark:bg-slate-700"
               value={data.contactInfo.number}
               onChange={handleContactInfo}
               placeholder="Mobile number"
             />
             {/* linkedin */}
             <div className="social-profile-info flex items-center">
-              <div className="border-2 border-slate-400 h-8 p-1 align-middle rounded-l-lg bg-slate-200 text-slate-600">
+              <div className="border-2 border-slate-400 h-8 p-1 align-middle rounded-l-lg bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:border-slate-500">
                 www.linkedin.com/in/
               </div>
               <input
                 type="url"
                 name="linkedin"
                 id="linkedin"
-                className="block w-full h-8 rounded-r-lg"
+                className="block w-full h-8 rounded-r-lg dark:bg-slate-700"
                 value={data.contactInfo.linkedin}
                 onChange={handleContactInfo}
                 placeholder="linkedin-username"
@@ -100,14 +100,14 @@ const HeaderForm = ({ data, setData }) => {
             </div>
             {/* github */}
             <div className="social-profile-info flex items-center">
-              <div className="border-2 border-slate-400 h-8 p-1 align-middle rounded-l-lg bg-slate-200 text-slate-600">
+              <div className="border-2 border-slate-400 h-8 p-1 align-middle rounded-l-lg bg-slate-200 text-slate-600 dark:bg-slate-700 dark:text-slate-100 dark:border-slate-500">
                 www.github.com/
               </div>
               <input
                 type="url"
                 name="github"
                 id="github"
-                className="block w-full h-8 rounded-r-lg border-slate-500"
+                className="block w-full h-8 rounded-r-lg border-slate-500 dark:bg-slate-700"
                 value={data.contactInfo.github}
                 onChange={handleContactInfo}
                 placeholder="github-username"
@@ -118,7 +118,7 @@ const HeaderForm = ({ data, setData }) => {
               type="url"
               name="website"
               id="website"
-              className="block w-full"
+              className="block w-full dark:bg-slate-700"
               value={data.contactInfo.website}
               onChange={handleContactInfo}
               placeholder="Your web portfolio. Ex: https://www.myportfolio.com"
