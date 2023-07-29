@@ -3,6 +3,11 @@
 ## About
 This application allows you to create your own CV and export it into a PDF file ready to be delivered. With this application you can add sections like education, skills, personal information and experience. Every section can be added, modified and deleted.
 
+CV Application
+![CV Application](./README_files/cv_scrennshot1.jpeg)
+Dark mode
+![CV Application night](./README_files/cv_screenshot2.jpeg)
+
 ## how to run the Project
 To run the project,
 1. Download this repository
